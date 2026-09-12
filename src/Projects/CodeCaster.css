@@ -1,0 +1,38 @@
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #30363d;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.code-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.code-container::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+.code-container::-webkit-scrollbar-thumb {
+  background-color: #30363d;
+  border-radius: 10px;
+  border: 2px solid #161b22;
+}

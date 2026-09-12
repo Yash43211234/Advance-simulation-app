@@ -1,0 +1,463 @@
+
+.live-css-typer {
+  width: 100%;
+}
+
+
+/* ========================================================= */
+/* HEADER */
+/* ========================================================= */
+
+.typer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.typer-header h1 {
+  margin: 0;
+}
+
+.typer-header p {
+  margin: 5px 0 0;
+  opacity: 0.65;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #666;
+}
+
+.status-dot.active {
+  background: #00b2ff;
+
+  box-shadow:
+    0 0 12px
+    rgba(0, 178, 255, 0.8);
+}
+
+
+/* ========================================================= */
+/* MAIN LAYOUT */
+/* ========================================================= */
+
+.typer-layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 60fr)
+    minmax(0, 40fr);
+
+  gap: 20px;
+
+  align-items: start;
+}
+
+
+/* ========================================================= */
+/* SECTION TITLE */
+/* ========================================================= */
+
+.section-title {
+  font-size: 15px;
+
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+
+/* ========================================================= */
+/* SIZE CONTROLS */
+/* ========================================================= */
+
+.size-controls {
+  width: 100%;
+
+  padding: 13px;
+
+  margin-bottom: 14px;
+
+  border:
+    1px solid #30363d;
+
+  border-radius: 12px;
+
+  background: #0d1117;
+}
+
+.control-title {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.preset-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-bottom: 12px;
+}
+
+.preset-buttons button {
+  padding: 6px 10px;
+
+  border:
+    1px solid #30363d;
+
+  border-radius: 7px;
+
+  background: #161b22;
+
+  color: #8b949e;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  text-transform: capitalize;
+
+  transition:
+    0.2s ease;
+}
+
+.preset-buttons button:hover {
+  border-color: #00b2ff;
+
+  color: white;
+}
+
+.preset-buttons button.active {
+  background: #00b2ff;
+
+  border-color: #00b2ff;
+
+  color: white;
+}
+
+
+/* ========================================================= */
+/* SLIDERS */
+/* ========================================================= */
+
+.sliders {
+  display: grid;
+
+  gap: 5px;
+}
+
+.sliders label {
+  font-size: 11px;
+
+  color: #8b949e;
+}
+
+.sliders input[type="range"] {
+  width: 100%;
+
+  margin-bottom: 4px;
+
+  cursor: pointer;
+
+  accent-color: #00b2ff;
+}
+
+
+/* ========================================================= */
+/* IFRAME CONTAINER */
+/* ========================================================= */
+
+.iframe-container {
+  width: 100%;
+
+  height: 430px;
+
+  overflow: auto;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  padding: 12px;
+
+  background: #090c10;
+
+  border:
+    1px solid #30363d;
+
+  border-radius: 14px;
+}
+
+
+/* ========================================================= */
+/* CSS DISPLAY */
+/* ========================================================= */
+
+.css-display-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.css-display {
+  flex-shrink: 0;
+
+  background: #0d1117;
+
+  border:
+    1px solid #30363d;
+
+  border-radius: 12px;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+
+  transition:
+    width 0.2s ease,
+    height 0.2s ease;
+}
+
+.css-display pre {
+  margin: 0;
+
+  padding: 18px;
+
+  min-height: 100%;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  font-family:
+    "Fira Code",
+    "Cascadia Code",
+    Consolas,
+    monospace;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #e6edf3;
+}
+
+
+/* ========================================================= */
+/* CSS DISPLAY CONTROLS */
+/* ========================================================= */
+
+.css-size-controls {
+  margin-top: 18px;
+}
+
+
+/* ========================================================= */
+/* EDITORS */
+/* ========================================================= */
+
+.editor {
+  margin-bottom: 15px;
+}
+
+.editor-header {
+  display: flex;
+
+  align-items: center;
+
+  padding: 9px 12px;
+
+  background: #161b22;
+
+  border:
+    1px solid #30363d;
+
+  border-bottom: none;
+
+  border-radius:
+    9px 9px 0 0;
+
+  font-size: 12px;
+}
+
+.editor textarea {
+  display: block;
+
+  width: 100%;
+
+  height: 190px;
+
+  resize: none;
+
+  overflow: auto;
+
+  padding: 14px;
+
+  border:
+    1px solid #30363d;
+
+  border-radius:
+    0 0 9px 9px;
+
+  background: #0d1117;
+
+  color: #e6edf3;
+
+  outline: none;
+
+  font-family:
+    "Fira Code",
+    "Cascadia Code",
+    Consolas,
+    monospace;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.editor textarea:focus {
+  border-color: #00b2ff;
+}
+
+
+/* ========================================================= */
+/* SPEED */
+/* ========================================================= */
+
+.speed-control {
+  padding: 12px;
+
+  margin-bottom: 14px;
+
+  border:
+    1px solid #30363d;
+
+  border-radius: 10px;
+
+  background: #0d1117;
+}
+
+.speed-control label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+}
+
+.speed-control input {
+  width: 100%;
+
+  accent-color: #00b2ff;
+}
+
+
+/* ========================================================= */
+/* ACTION BUTTONS */
+/* ========================================================= */
+
+.action-buttons {
+  display: flex;
+
+  gap: 8px;
+}
+
+.action-buttons button {
+  flex: 1;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+.action-buttons .start {
+  background: #00b2ff;
+  color: white;
+}
+
+.action-buttons .stop {
+  background: #30363d;
+  color: white;
+}
+
+.action-buttons .reset {
+  background: #21262d;
+  color: white;
+}
+
+
+/* ========================================================= */
+/* STATUS */
+/* ========================================================= */
+
+.simulation-status {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 12px;
+
+  padding: 12px;
+
+  border-radius: 9px;
+
+  background: #0d1117;
+
+  border:
+    1px solid #30363d;
+
+  font-size: 12px;
+}
+
+.simulation-status span {
+  color: #8b949e;
+}
+
+.simulation-status strong {
+  color: #00b2ff;
+}
+
+
+/* ========================================================= */
+/* RESPONSIVE */
+/* ========================================================= */
+
+@media (max-width: 900px) {
+  .typer-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .iframe-container {
+    height: 400px;
+  }
+}
